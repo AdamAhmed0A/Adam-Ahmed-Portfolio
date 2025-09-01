@@ -21,7 +21,7 @@ My mission is to combine **art with code** to build creative, functional, and un
 ---
 
 ## 🚀 Projects
-### 🔹 WhisperHub
+### 🔹 WhisperHub   
 A real-time chat application built with Laravel & React.  
 
 ### 🔹 Flavor Fiesta

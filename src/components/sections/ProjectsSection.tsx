@@ -37,7 +37,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
       transition={{ duration: 0.6, delay: index * 0.2 }}
       className="group"
     >
-      <div className="glass-card p-8 rounded-3xl h-full transition-all duration-500 hover:scale-105 card-3d">
+      <div className="glass-card p-8 rounded-3xl h-full transition-all duration-500 hover:scale-105 card-3d" id='project'>
         {/* Project Icon */}
         <div className="flex items-center gap-4 mb-6">
           <div 

@@ -7,6 +7,9 @@ export default function HeroSection() {
   const scrollToAbout = () => {
     document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
   };
+  const scrollToProjects = () => {
+    document.getElementById('project')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
@@ -90,14 +93,16 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.9 }}
-            className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center "
           >
-            <Button className="btn-cosmic-primary text-lg px-8 py-4">
+            <Button 
+            className="btn-cosmic-primary text-lg px-8 py-4 transition duration-300" 
+            onClick={scrollToProjects}>
               View My Work
             </Button>
             <Button 
               variant="outline" 
-              className="btn-cosmic-secondary text-lg px-8 py-4"
+              className="btn-cosmic-secondary text-lg px-8 py-4 transition duration-300"
               onClick={scrollToAbout}
             >
               About Me
@@ -114,7 +119,7 @@ export default function HeroSection() {
           >
             <div className="flex flex-col items-center animate-pulse-glow">
               <ArrowDown className="w-6 h-6 text-primary mb-2" />
-              <span className="text-cosmic-body text-sm">explore more</span>
+              <span className="text-cosmic-body text-sm">Explore more</span>
             </div>
           </motion.div>
         </motion.div>
