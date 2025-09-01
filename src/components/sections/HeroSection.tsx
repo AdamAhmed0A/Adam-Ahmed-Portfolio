@@ -103,20 +103,20 @@ export default function HeroSection() {
               About Me
             </Button>
           </motion.div>
-        </motion.div>
 
-        {/* Scroll Indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 cursor-pointer"
-          onClick={scrollToAbout}
-        >
-          <div className="flex flex-col items-center animate-pulse-glow">
-            <ArrowDown className="w-6 h-6 text-primary mb-2" />
-            <span className="text-cosmic-body text-sm">Scroll to explore</span>
-          </div>
+          {/* Scroll Indicator */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 1.2 }}
+            className="flex flex-col items-center cursor-pointer mt-8"
+            onClick={scrollToAbout}
+          >
+            <div className="flex flex-col items-center animate-pulse-glow">
+              <ArrowDown className="w-6 h-6 text-primary mb-2" />
+              <span className="text-cosmic-body text-sm">explore more</span>
+            </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>
