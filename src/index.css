@@ -2,95 +2,69 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Cosmic Digital Universe Design System - Futuristic Portfolio for Adam Ahmed
+All colors MUST be HSL. Unique 3D-focused design with neon accents and cosmic gradients.
 */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
+    /* Cosmic Background System */
+    --cosmic-void: 230 35% 7%;
+    --cosmic-deep: 235 30% 12%;
+    --cosmic-surface: 240 25% 18%;
+    --cosmic-elevated: 245 20% 25%;
+    
+    /* Neon Accent System */
+    --neon-cyan: 180 100% 50%;
+    --neon-purple: 270 100% 65%;
+    --neon-pink: 320 100% 70%;
+    --neon-blue: 220 100% 60%;
+    --neon-green: 140 100% 50%;
+    
+    /* Text System */
+    --text-primary: 220 20% 95%;
+    --text-secondary: 220 15% 75%;
+    --text-muted: 220 10% 55%;
+    --text-accent: 180 100% 50%;
+    
+    /* Background Gradients */
+    --gradient-cosmic: linear-gradient(135deg, hsl(var(--cosmic-void)) 0%, hsl(var(--cosmic-deep)) 50%, hsl(var(--cosmic-surface)) 100%);
+    --gradient-neon-1: linear-gradient(45deg, hsl(var(--neon-cyan) / 0.8) 0%, hsl(var(--neon-purple) / 0.8) 100%);
+    --gradient-neon-2: linear-gradient(135deg, hsl(var(--neon-pink) / 0.6) 0%, hsl(var(--neon-blue) / 0.6) 100%);
+    --gradient-glass: linear-gradient(135deg, hsl(var(--cosmic-surface) / 0.3) 0%, hsl(var(--cosmic-elevated) / 0.1) 100%);
+    
+    /* Glow Effects */
+    --glow-cyan: 0 0 30px hsl(var(--neon-cyan) / 0.5), 0 0 60px hsl(var(--neon-cyan) / 0.3);
+    --glow-purple: 0 0 30px hsl(var(--neon-purple) / 0.5), 0 0 60px hsl(var(--neon-purple) / 0.3);
+    --glow-pink: 0 0 30px hsl(var(--neon-pink) / 0.5), 0 0 60px hsl(var(--neon-pink) / 0.3);
+    
+    /* Standard Mappings for Components */
+    --background: var(--cosmic-void);
+    --foreground: var(--text-primary);
+    --card: var(--cosmic-surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--cosmic-elevated);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--neon-cyan);
+    --primary-foreground: var(--cosmic-void);
+    --secondary: var(--cosmic-elevated);
+    --secondary-foreground: var(--text-primary);
+    --muted: var(--cosmic-surface);
+    --muted-foreground: var(--text-muted);
+    --accent: var(--neon-purple);
+    --accent-foreground: var(--cosmic-void);
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: var(--text-primary);
+    --border: var(--cosmic-elevated);
+    --input: var(--cosmic-elevated);
+    --ring: var(--neon-cyan);
+    --radius: 1rem;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 }
 
@@ -100,6 +74,188 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans overflow-x-hidden;
+    background: var(--gradient-cosmic);
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--cosmic-void));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--gradient-neon-1);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--gradient-neon-2);
+  }
+}
+
+@layer components {
+  /* Typography System */
+  .text-cosmic-title {
+    font-family: 'Orbitron', monospace;
+    font-weight: 900;
+    background: var(--gradient-neon-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-cosmic-heading {
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    color: hsl(var(--text-primary));
+  }
+
+  .text-cosmic-body {
+    font-family: 'Inter', sans-serif;
+    color: hsl(var(--text-secondary));
+    line-height: 1.7;
+  }
+
+  /* Glass Morphism Effects */
+  .glass-panel {
+    background: var(--gradient-glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--cosmic-elevated) / 0.3);
+    border-radius: var(--radius);
+  }
+
+  .glass-card {
+    background: var(--gradient-glass);
+    backdrop-filter: blur(15px);
+    border: 1px solid hsl(var(--cosmic-surface) / 0.4);
+    border-radius: var(--radius);
+    transition: var(--transition-smooth);
+  }
+
+  .glass-card:hover {
+    background: hsl(var(--cosmic-elevated) / 0.4);
+    border-color: hsl(var(--neon-cyan) / 0.5);
+    box-shadow: var(--glow-cyan);
+    transform: translateY(-4px);
+  }
+
+  /* Neon Button Variants */
+  .btn-cosmic-primary {
+    background: var(--gradient-neon-1);
+    color: hsl(var(--cosmic-void));
+    font-family: 'Orbitron', monospace;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border-radius: var(--radius);
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .btn-cosmic-primary:hover {
+    box-shadow: var(--glow-cyan);
+    transform: translateY(-2px) scale(1.05);
+  }
+
+  .btn-cosmic-secondary {
+    background: transparent;
+    color: hsl(var(--neon-cyan));
+    border: 2px solid hsl(var(--neon-cyan));
+    font-family: 'Orbitron', monospace;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .btn-cosmic-secondary:hover {
+    background: hsl(var(--neon-cyan) / 0.1);
+    box-shadow: var(--glow-cyan);
+    transform: translateY(-2px);
+  }
+
+  /* Floating Animation */
+  .floating {
+    animation: floating 6s ease-in-out infinite;
+  }
+
+  .floating-delayed {
+    animation: floating 6s ease-in-out infinite 2s;
+  }
+
+  /* Pulse Glow Animation */
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  /* Particle Background */
+  .particle-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  /* 3D Card Hover Effect */
+  .card-3d {
+    transform-style: preserve-3d;
+    transition: var(--transition-smooth);
+  }
+
+  .card-3d:hover {
+    transform: rotateY(5deg) rotateX(5deg) translateZ(20px);
+  }
+}
+
+@layer utilities {
+  /* Custom animations */
+  @keyframes floating {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(2deg); }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { 
+      box-shadow: 0 0 20px hsl(var(--neon-cyan) / 0.5);
+      transform: scale(1);
+    }
+    50% { 
+      box-shadow: var(--glow-cyan);
+      transform: scale(1.02);
+    }
+  }
+
+  @keyframes rotate-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .animate-rotate-slow {
+    animation: rotate-slow 20s linear infinite;
+  }
+
+  .animate-floating {
+    animation: floating 6s ease-in-out infinite;
+  }
+
+  .animate-floating-delayed {
+    animation: floating 6s ease-in-out infinite 2s;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
   }
 }
