@@ -1,6 +1,6 @@
-# 🌟 Adam Rayn - Full Stack Web Developer
+# 🌟 Adam Ahmed - Full Stack Web Developer
 
-Hi, I'm **Adam Rayn**, a passionate **Full Stack Web Developer** from Egypt.  
+Hi, I'm **Adam Ahmed**, a passionate **Full Stack Web Developer** from Egypt.  
 I specialize in **PHP Laravel Development** since 2023 and have been programming since 2021.  
 My mission is to combine **art with code** to build creative, functional, and unique digital experiences.
 
