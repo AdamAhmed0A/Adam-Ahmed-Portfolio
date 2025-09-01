@@ -22,7 +22,7 @@ export default function ContactSection() {
     {
       icon: <Mail className="w-6 h-6" />,
       title: 'Email',
-      value: 'adam.ahmed@example.com',
+      value: 'adamshawky222@example.com',
       color: '#00ffff'
     },
     {
