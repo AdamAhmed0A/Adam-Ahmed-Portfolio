@@ -27,8 +27,8 @@ A real-time chat application built with Laravel & React.
 ### 🔹 Flavor Fiesta
 A food platform for exploring cuisines, recipes, and interacting with chefs.  
 
-### 🔹 Pharmacy Management System
-A complete management solution for pharmacies, built with Laravel.  
+### 🔹 Event Management System
+A complete management solution for Organizers, built with Laravel.  
 
 ---
 
