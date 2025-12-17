@@ -59,7 +59,7 @@ A complete management solution for Organizers, built with Laravel.
 
 ## 🌐 Live Preview
 You can view the portfolio online here:  
-👉 [Live Portfolio](https://your-live-link.com)  
+👉 [Live Portfolio](https://adam-ahmed-portfolio.vercel.app)  
 
 *(Replace `https://your-live-link.com` with your deployed site URL once you host it, e.g., Netlify, Vercel, GitHub Pages)*
 
