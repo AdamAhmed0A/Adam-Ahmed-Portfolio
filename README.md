@@ -66,6 +66,6 @@ You can view the portfolio online here:
 ---
 
 ## 📬 Contact
-- 📧 Email: [(mailto:adamshawky222@example.com)]
-- 💼 LinkedIn: [(https://linkedin.com/in/adam-ahmed-linkdin)]  
-- 🐙 GitHub: [(https://github.com/AdamAhmed0A)]
+- 📧 Email: [adamshawky222@gmail.com](mailto:adamshawky222@example.com)
+- 💼 LinkedIn: [AdamAhmed](https://linkedin.com/in/adam-ahmed-linkdin)
+- 🐙 GitHub: [Adam Ahmed](https://github.com/AdamAhmed0A)
